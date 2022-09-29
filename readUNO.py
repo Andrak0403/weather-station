@@ -9,7 +9,7 @@ while 1:
    windPrint = ser.read().decode('ascii')
    tempfil = open('/sys/bus/w1/devices/28-0000095c963e/temperature')
    temperatur = tempfil.read()
-   windPrint = windPrint.replace(r'\n','')
+   windPrint = windPrint.replace(r'\n','').replace('\r','')
    if len(temperatur) > 0:
       temperaturprint = (float(temperatur) / 1000)
       temperaturprint = str(temperaturprint)
