@@ -20,8 +20,9 @@ while 1:
       if len(temperatur) > 0:
          temperaturprint = (float(temperatur) / 1000)
          temperaturprint = str(temperaturprint)
-         print(f'\rTemperaturen är: {temperaturprint[:4]} C och Vindhastigheten är: {windSpeed} m/s', end='')
+         print(f'\rTemperaturen är: {temperaturprint[:4]} C och Vindhastigheten är: {windSpeed} m/s     ', end='')
       time.sleep(0.15)
       tempfil.close()
    elif windSpeed == 999:
-      print('Awaiting valid wind speed value')
+      print('---Awaiting a valid wind speed value.---\n')
+      time.sleep(1)
